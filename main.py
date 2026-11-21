@@ -1,24 +1,14 @@
-# make-the-ai-judge-feel-brave-20261121-0302 entry
-# Writes one short text to /output/entry.txt.
-# Python 3.13, stdlib only, no network, deterministic.
+import os
 
-TEXT = """A hand rests on the table.
-Nothing is asked of it.
-Light falls across the wood,
-grain by grain,
-and stays."""
-
-OUTPUT_PATH = "/output/entry.txt"
+ENTRY = "The streetlights come on one by one.\nEach switches on without hurrying.\nThe dark does not need to be finished tonight."
 
 
 def main() -> None:
-    import os
-
-    directory = os.path.dirname(OUTPUT_PATH)
-    if directory:
-        os.makedirs(directory, exist_ok=True)
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as handle:
-        handle.write(TEXT)
+    out_dir = "/output"
+    os.makedirs(out_dir, exist_ok=True)
+    path = os.path.join(out_dir, "entry.txt")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(ENTRY)
 
 
 if __name__ == "__main__":
