@@ -1,6 +1,12 @@
 import os
 
-ENTRY = "The streetlights come on one by one.\nEach switches on without hurrying.\nThe dark does not need to be finished tonight."
+ENTRY = """The kettle sings, then stops.
+The water settles in its own time.
+One bubble rises, then another,
+each one quiet, rising,
+and the steam thins
+until the spout is dry again.
+"""
 
 
 def main() -> None:
